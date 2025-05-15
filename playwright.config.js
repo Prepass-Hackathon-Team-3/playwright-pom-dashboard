@@ -27,7 +27,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://example.com',
+    baseURL: 'https://black-mud-0cf938c10.6.azurestaticapps.net/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -37,13 +37,19 @@ export default defineConfig({
     
     /* Collect video on test failure */
     video: 'on-first-retry',
+    
+    /* Set the color scheme preference */
+    colorScheme: 'dark',
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        ...devices['Desktop Chrome'],
+        colorScheme: 'dark',  // Set dark mode specifically for Chrome
+      },
     },
 
     {

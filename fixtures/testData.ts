@@ -3,10 +3,7 @@
  */
 
 export const testUrls = {
-  baseUrl: 'https://example.com',
-  dashboardPage: '/dashboard',
-  settingsPage: '/settings',
-  profilePage: '/profile'
+  dashboardPage: '/dashboard'
 };
 
 export const expectedTexts = {
